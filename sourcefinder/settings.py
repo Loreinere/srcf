@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'upload',
     'import_export',
     'rest_framework',
-    'social_django',
+    'social-auth-app-django',
 
 
 
