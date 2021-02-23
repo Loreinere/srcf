@@ -26,7 +26,7 @@ SECRET_KEY = 'e3de1nu=%@ur^zyjez-atg4tbj&9ylx%$1kqob&d1zsz$_s^yu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['source-finder.org',
+ALLOWED_HOSTS = ['source-finder.org'
                  'srcfind.herokuapp.com']
 
 
@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'sourcefinder.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/tmp/mysite.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
