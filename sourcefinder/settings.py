@@ -26,8 +26,7 @@ SECRET_KEY = 'e3de1nu=%@ur^zyjez-atg4tbj&9ylx%$1kqob&d1zsz$_s^yu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['source-finder.org'
-                 'srcfind.herokuapp.com']
+ALLOWED_HOSTS = ['srcfind.herokuapp.com']
 
 
 # Application definition
