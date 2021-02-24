@@ -46,10 +46,7 @@ INSTALLED_APPS = [
     'upload',
     'import_export',
     'rest_framework',
-    'social_django'
-
-
-
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +65,7 @@ ROOT_URLCONF = 'sourcefinder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -155,8 +152,10 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-AUTHENTICATION_BACKENDs=['social_core.backends.facebook.FacebookOAuth2',
-]
+AUTHENTICATION_BACKENDs=('django.contrib.auth.backends.ModelBackend',
+                         'account.authentication.EmailAuthBackend',
+                         'social_core.backends.facebook.FacebookOAuth2',
+)
 
 SOCIAL_AUTH_FACEBOOK_KEY = '4190413164326253'
 SOCIAL_AUTH_FACEBOOK_SECRET = '7d94a12715c31f56378cbc33428c80fb'
