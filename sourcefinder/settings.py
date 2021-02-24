@@ -26,7 +26,8 @@ SECRET_KEY = 'e3de1nu=%@ur^zyjez-atg4tbj&9ylx%$1kqob&d1zsz$_s^yu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['srcfind.herokuapp.com']
+ALLOWED_HOSTS = ['srcfind.herokuapp.com',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'upload',
     'import_export',
     'rest_framework',
+    'social_django'
 
 
 
@@ -58,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'sourcefinder.urls'
@@ -73,6 +76,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',  # <- Here
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -150,10 +155,12 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-AUTHENTICATION_BACKENDs=['social_core.backends.facebook.FacebookOAuth2',]
+AUTHENTICATION_BACKENDs=['social_core.backends.facebook.FacebookOAuth2',
+]
 
 SOCIAL_AUTH_FACEBOOK_KEY = '4190413164326253'
 SOCIAL_AUTH_FACEBOOK_SECRET = '7d94a12715c31f56378cbc33428c80fb'
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user_detail',
