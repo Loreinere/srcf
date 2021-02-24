@@ -65,7 +65,7 @@ ROOT_URLCONF = 'sourcefinder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -153,7 +153,6 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
 AUTHENTICATION_BACKENDS=('django.contrib.auth.backends.ModelBackend',
-                         'account.authentication.EmailAuthBackend',
                          'social_core.backends.facebook.FacebookOAuth2',
 )
 
