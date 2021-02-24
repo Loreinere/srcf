@@ -152,7 +152,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-AUTHENTICATION_BACKENDs=('django.contrib.auth.backends.ModelBackend',
+AUTHENTICATION_BACKENDS=('django.contrib.auth.backends.ModelBackend',
                          'account.authentication.EmailAuthBackend',
                          'social_core.backends.facebook.FacebookOAuth2',
 )
