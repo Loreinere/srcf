@@ -10,6 +10,11 @@ from django.views.decorators.http import require_POST
 
 from .models import Contact
 
+def privacy_policy(request):
+    return render(request,
+                  'account/privacy_policy.html',
+                  )
+
 def user_login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
