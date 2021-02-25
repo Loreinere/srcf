@@ -208,7 +208,7 @@ ul.messages li a.close {
 
 /* social-auth */
 .social {
-  float: right;
+  float: left;
 }
 
 .social li {
