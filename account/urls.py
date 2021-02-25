@@ -13,7 +13,7 @@ urlpatterns = [
      path ('dashboard/', views.dashboard, name='dashboard'),
      path ('edit/', views.edit, name='edit'),
      path ('users/', views.user_list, name='user_list'),
-     
+     path ('privacy_policy/', views.privacy_policy, name='privacy_policy'),
      path ('users/<username>/', views.user_detail, name='user_detail'),
 
 
