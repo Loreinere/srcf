@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'import_export',
     'rest_framework',
     'social_django',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -155,8 +155,10 @@ LOGOUT_URL = 'logout'
 
 AUTHENTICATION_BACKENDS=('django.contrib.auth.backends.ModelBackend',
                          'social_core.backends.facebook.FacebookOAuth2',
+                         'social_core.backends.github.GithubOAuth2',
 )
-
+SOCIAL_AUTH_GITHUB_KEY = 'f1fd2aa5ec69a05bbe84'
+SOCIAL_AUTH_GITHUB_SECRET = '214959918134e975b56dd3dbe408aa39f2472ac7'
 SOCIAL_AUTH_FACEBOOK_KEY = '4190413164326253'
 SOCIAL_AUTH_FACEBOOK_SECRET = '7d94a12715c31f56378cbc33428c80fb'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
