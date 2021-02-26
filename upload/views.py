@@ -67,7 +67,7 @@ def upload_details(request, id, Issn, **kwargs):
         comment_form = CommentForm()
 
 
-    url='https://api.elsevier.com/content/serial/title/issn/{}?apiKey=8661dc914325f7d88a1a36e9445a22d6'
+    url='https://api.elsevier.com/content/serial/title/issns/{}?apiKey=8661dc914325f7d88a1a36e9445a22d6'
     issns = post.Issn
 
     r = requests.get(url.format(issns)).json()
