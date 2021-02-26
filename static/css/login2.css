@@ -236,6 +236,10 @@ ul.messages li a.close {
   background: #de1710;
 }
 
+.social li.github {
+  background: #de1710;
+}
+
 /* images */
 .image-preview, .image-detail {
   max-width: 300px;
