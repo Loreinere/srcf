@@ -240,6 +240,10 @@ ul.messages li a.close {
   background: #343a40;
 }
 
+.social li.ORCID {
+  background: #A2D900;
+}
+
 /* images */
 .image-preview, .image-detail {
   max-width: 300px;
