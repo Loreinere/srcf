@@ -158,6 +158,7 @@ AUTHENTICATION_BACKENDS=('django.contrib.auth.backends.ModelBackend',
                          'social_core.backends.github.GithubOAuth2',
                          'social_core.backends.orcid.ORCIDMemberOAuth2',
 )
+
 SOCIAL_AUTH_ORCID_KEY = 'APP-VTYU5QMC93KR8HQB'
 SOCIAL_AUTH_ORCID_SECRET = 'c722110b-33fe-4f8c-a345-1614949a770c'
 SOCIAL_AUTH_GITHUB_KEY = 'f1fd2aa5ec69a05bbe84'
