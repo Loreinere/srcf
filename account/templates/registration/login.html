@@ -28,9 +28,17 @@
   <ul>
     <li class="facebook">
       <a href="{% url "social:begin" "facebook" %}">Sign in with Facebook</a>
-      <br>
-  <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
-  <a href="{% url 'social:begin' 'orcid' %}">Login with ORCID</a><br>
+    </li>
+  </ul>
+</div>
+<div class="social">
+  <ul>
+    <li class="github">
+      <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
+    </li>
+  </ul>
+</div>
+  <a href="{% url 'social:begin' 'orcid' %}">Login with ORCID</a>
     </li>
   </ul>
 </div>
